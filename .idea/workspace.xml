@@ -6,6 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374172679600" ignored="false" />
     <file path="/index.html" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374174661010" ignored="false" />
+    <file path="/config.xml" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374177396411" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="87" selection-start="990" selection-end="990" vertical-scroll-proportion="0.56771797">
+            <state line="22" column="87" selection-start="990" selection-end="990" vertical-scroll-proportion="-11.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.33097345">
               <folding />
             </state>
           </provider>
@@ -53,6 +63,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -246,7 +257,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="87" selection-start="990" selection-end="990" vertical-scroll-proportion="0.56771797">
+        <state line="22" column="87" selection-start="990" selection-end="990" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.33097345">
           <folding />
         </state>
       </provider>

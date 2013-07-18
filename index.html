@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="css/codiqa.ext.css">
+  <!-- jQuery and jQuery Mobile -->
+  <script src="libs/jquery-1.9.1.min.js"></script>
+  <script src="libs/jquery.mobile-1.3.1.min.js"></script>
+
+  <!-- Extra Codiqa features -->
+  <script src="libs/codiqa.ext.js"></script>
+  <!-- Cordova -->
+  <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script> 
+    <script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady () {
+        var myCont = navigator.contacts.create({"displayName" : "Anton Serdiuk Test"});
+    }
+
+    </script>
+  </head>
+  <body>
+<!-- MAIN CLUBS LIST PAGE -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Header
+        </h3>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                <a href="#Information" data-transition="slide">
+                    Informationsdsd
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#Position" data-transition="slide">
+                    Position
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div data-role="page" id="Information">
+    <div data-theme="a" data-role="header">
+    	<a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+        	class="ui-btn-left">
+            Back
+        </a>
+        <h3>
+            Information
+        </h3>
+    </div>
+    <div data-role="content">
+    	<h2>
+            ARISSat-1
+        </h2>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+            Batt Voltage	
+            </div>
+            <div class="ui-block-b">
+                     
+            </div>
+            <div class="ui-block-a">
+            Batt Current
+            </div>
+            <div class="ui-block-b">
+            
+            </div>
+            <div class="ui-block-a">
+            Net Amp Hours
+            </div>
+            <div class="ui-block-b">
+            
+            </div>
+            <div class="ui-block-a">
+            IP Address
+            </div>
+            <div class="ui-block-b">
+            
+            </div>
+            <div class="ui-block-a">
+            <a data-role="button" href="#" data-icon="refresh"
+	        data-iconpos="left" class="Refresh">
+	            Update
+	        </a>
+            </div>
+            <div class="ui-block-b">
+            
+            </div>                       
+        </div>
+        <div id="deviceProperties"></div>	   
+    </div>
+</div>
+
+<div data-role="page" id="Position">
+    <div data-theme="a" data-role="header">
+    	<a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+        	class="ui-btn-left">
+            Back
+        </a>
+        <h3>
+            Position
+        </h3>
+    </div>
+    <div data-role="content">
+    	<img src="https://maps.googleapis.com/maps/api/staticmap?center=49.009051,52.902831&amp;zoom=3&amp;size=288x200&amp;markers=49.009051,52.902831&amp;sensor=false"
+        height="200" width="288"> 	   
+    </div>
+</div>
+<script>
+	$('.Refresh').on('click', function() {
+   		getJSONP("http://faks.kpi.ua/app/telemetry.php");
+	});
+	
+	function getJSONP(url){
+	   	$.ajax({
+	        url:url,
+	        dataType: 'jsonp',
+	        success:function(data){
+	            $(".ui-block-b").each(function(count){
+	                if(count == 0) {
+	                    $(this).html(data["Batt_Voltage"]);
+	                }
+	                if(count == 1) {
+	                    $(this).html(data["Batt_Current"]);
+	                }
+	                if(count == 2) {
+	                    $(this).html(data["Net_Amp_Hours"]);
+	                }
+	                if(count == 3) {
+	                    $(this).html(data["IP"]);
+	                }
+	            });                         
+	        },
+	        error: function(e){alert("error: " + e)}   
+	    });
+	}
+</script>
+</body>
+</html>

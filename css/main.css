@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+input, input:active, input:focus {    
+    padding: 6px 0 4px 10px;
+    border: 1px solid grey;
+    background: #fff;
+    border-radius: 5px;
+    margin:5px;
+}
+
+.ok {
+	background: url("img/ico_validation.png") no-repeat scroll #FFFFFF;
+	background-position: 98% 112%;
+	border: 2px solid #00FF00;
+}
+
+.error {
+    background: url("img/ico_validation.png") no-repeat scroll #FFFFFF;
+    background-position: 98% -12%;
+    border: 2px solid #FF3030;
+}

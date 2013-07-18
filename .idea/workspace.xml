@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374172679600" ignored="false" />
     <file path="/index.html" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374174661010" ignored="false" />
-    <file path="/config.xml" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374177396411" ignored="false" />
+    <file path="/config.xml" changelist="027c1913-b89c-43e0-81fa-209168772239" time="1374178382433" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.33097345">
+            <state line="25" column="37" selection-start="816" selection-end="816" vertical-scroll-proportion="0.39115044">
               <folding />
             </state>
           </provider>
@@ -173,7 +173,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="0" width="1900" height="1040" extended-state="0" />
+    <frame x="10" y="0" width="1900" height="1040" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -264,7 +264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.33097345">
+        <state line="25" column="37" selection-start="816" selection-end="816" vertical-scroll-proportion="0.39115044">
           <folding />
         </state>
       </provider>

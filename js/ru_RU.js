@@ -18,7 +18,7 @@
 	document.getElementById("birthday").setAttribute("placeholder", locUI.birthday);
 	document.getElementById("email").setAttribute("placeholder", locUI.email);
 	document.getElementById("phone").setAttribute("placeholder", locUI.phone);
-	document.getElementById("topBack").setAttribute("back", locUI.topBackBtn);
+	document.getElementById("topBack").setAttribute("back", locUI.topBackBtn);tets
 })();	
 
 

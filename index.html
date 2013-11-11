@@ -23,10 +23,12 @@
   	
   	 function onDeviceReady(){
   		//var a = navigator.contacts.create({"id" : "123123","displayName": "Test User"}); 
-  		
+  		alert("launched");
+  		navigator.notification.alert(device.model, function(){return true})
+
   		navigator.contacts.find(["id","displayName"], onSuccess, onError, {
   		  filter: "",
-  		  multiple: true,
+  		  multiple: true
   		});
   		//console.log(a);
   	 }

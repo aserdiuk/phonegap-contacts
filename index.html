@@ -19,30 +19,29 @@
   <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script> 
   <script type="text/javascript" charset="utf-8">
   	document.addEventListener("deviceready", onDeviceReady, false);
-  	 function onDeviceReady(){
-  	 	var options = new ContactFindOptions();
-		options.filter = "";
-		filter = ["displayName", "organizations"];
 
-  		 navigator.contacts.find("*", onSuccess, onError, options);		  		 
-  	 };
+  	
+  	 function onDeviceReady(){
+  		//var a = navigator.contacts.create({"id" : "123123","displayName": "Test User"}); 
+  		
+  		navigator.contacts.find(["id","displayName"], onSuccess, onError, {
+  		  filter: "",
+  		  multiple: true,
+  		});
+  		//console.log(a);
+  	 }
   	 
   	 function onSuccess(contacts){
-  	 	alert(contacts.length);
-	  	 for (var i = 0; i < contacts.length; i++) {
-		     for (var j = 0; j < contacts[i].organizations.length; j++) {
-		         $("#contacts").html("Pref: "     + contacts[i].organizations[j].pref       + "\n" +
-		             "Type: "       + contacts[i].organizations[j].type       + "\n" +
-		             "Name: "       + contacts[i].organizations[j].name       + "\n" +
-		             "Department: " + contacts[i].organizations[j].department + "\n" +
-		             "Title: "      + contacts[i].organizations[j].title);
-		     }
-	         }	   		 
+  		 alert(contacts.length);
+  		 for (var i=0; i<contacts.length; i++) {
+  	        $("#contacts").html("Display Name = " + contacts[i].displayName);
+  	    }
+   		 
   	 };
   	 
-  	function onError(contactError) {
-        alert('Error: ' + contactError);
-    };
+  	function onError(e) {
+        	alert( e);
+    	};
   </script>
   </head>
   <body>

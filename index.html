@@ -18,12 +18,26 @@
   <!-- Cordova -->
   <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script> 
   <script type="text/javascript" charset="utf-8">
-    /*document.addEventListener("deviceready", onDeviceReady, false);
-
-    function onDeviceReady () {
-        var myCont = navigator.contacts.create({"displayName" : "Anton Serdiuk Test"});
-    }
-*/
+  	document.addEventListener("deviceready", onDeviceReady, false);
+  	 function onDeviceReady(){
+  		 navigator.contacts.find("*", onSuccess, onError, "");		  		 
+  	 };
+  	 
+  	 function onSuccess(){
+  		 for (var i = 0; i < contacts.length; i++) {
+             for (var j = 0; j < contacts[i].organizations.length; j++) {
+                 $("#deviceProperties").html("Pref: "     + contacts[i].organizations[j].pref       + "\n" +
+                     "Type: "       + contacts[i].organizations[j].type       + "\n" +
+                     "Name: "       + contacts[i].organizations[j].name       + "\n" +
+                     "Department: " + contacts[i].organizations[j].department + "\n" +
+                     "Title: "      + contacts[i].organizations[j].title);
+             }
+         }	   		 
+  	 };
+  	 
+  	function onError(contactError) {
+        alert('Error: ' + contactError);
+    };
   </script>
   </head>
   <body>
